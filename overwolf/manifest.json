@@ -1,0 +1,76 @@
+{
+  "$schema": "../schema/owmanifest.json",
+  "manifest_version": 1,
+  "type": "WebApp",
+  "meta": {
+    "name": "project",
+    "version": "1.0.0",
+    "author": "publisher",
+    "icon": "icons/icon.png",
+    "icon_gray": "icons/icon_gray.png",
+    "launcher_icon": "icons/icon.ico",
+    "dock_button_title": "project",
+    "description": "what does it do?",
+    "minimum-overwolf-version": "0.121.0.17"
+  },
+  "permissions": [
+    "Extensions",
+    "GameInfo",
+    "Hotkeys",
+    "Logging"
+  ],
+  "data": {
+    "game_targeting": {
+      "type": "dedicated",
+      "game_ids": []
+    },
+    "launch_events": [{
+      "event": "GameLaunch",
+      "event_data": {
+          "game_ids": [],
+          "wait_for_stable_framerate": 30
+      },
+      "start_minimized": false
+    }],
+    "game_events": [],
+    "protocol_override_domains": {
+    },
+    "hotkeys": {
+      "toggle_visibility_main": {
+        "title": "Show/Hide App Name",
+        "default": "Ctrl+Q",
+        "action-type": "custom",
+        "passthrough": false
+      }
+    },
+    "enable_auto_refresh": true,
+    "reload_delay": 500,
+    "filter": "*.*",
+    "user_agent": "Overwolf",
+    "start_window": "main",
+    "windows": {
+      "background": {
+        "file": "windows/background.html",
+				"background_optimization": true,
+				"is_background_page": true
+      },
+      "main": {
+        "file": "windows/index.html",
+        "resizable": false,
+				"desktop_only": true,
+        "native_window": true,
+				"size": {
+					"width": 1000,
+					"height": 618
+				}
+      }
+    },
+    "force_browser": "overwolf",
+    "content_security_policy": "default-src 'self'",
+    "externally_connectable": {
+      "matches": [
+      ]
+    },
+    "open_dev_tools": true
+  }
+}
