@@ -3,22 +3,17 @@
   "manifest_version": 1,
   "type": "WebApp",
   "meta": {
-    "name": "project",
+    "name": "Vue App Sample",
     "version": "1.0.0",
-    "author": "publisher",
+    "minimum-overwolf-version": "0.121.0.17",
+    "author": "ThaySan",
     "icon": "icons/icon.png",
     "icon_gray": "icons/icon_gray.png",
     "launcher_icon": "icons/icon.ico",
-    "dock_button_title": "project",
-    "description": "what does it do?",
-    "minimum-overwolf-version": "0.121.0.17"
+    "window_icon": "icons/icon.png",
+    "description": ""
   },
-  "permissions": [
-    "Extensions",
-    "GameInfo",
-    "Hotkeys",
-    "Logging"
-  ],
+  "permissions": [],
   "data": {
     "game_targeting": {
       "type": "dedicated",
@@ -70,7 +65,6 @@
     "externally_connectable": {
       "matches": [
       ]
-    },
-    "open_dev_tools": true
+    }
   }
 }
